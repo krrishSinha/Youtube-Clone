@@ -1,23 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import Navbar from "./components/Navbar";
+import Feed from "./components/Feed";
+import ChannelPage from "./components/ChannelPage";
+import VideoPage from "./components/VideoPage";
+import SearchPage from "./components/SearchPage";
+import { Routes, Route } from 'react-router-dom'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div style={{ backgroundColor: '#000000', color: '#EDEADE', minHeight: '100vh' }} >
+      <Navbar />
+      <Routes>
+      <Route path="/" element={ <Feed/> } />
+      <Route path="/video/:id" exact element={ <VideoPage/> } />
+      <Route path="/search/:searchTerm" exact element={ <SearchPage /> } />
+      <Route path="/channel/:id" exact element={ <ChannelPage/> } />
+      </Routes>
     </div>
   );
 }
