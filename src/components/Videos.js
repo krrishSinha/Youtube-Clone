@@ -20,8 +20,8 @@ const Videos = ({ videos, width2 }) => {
                 videos.map((video) => {
                     return (
                         <>
-                            {video.id.channelId && <ChannelCard video={video} />}
                             {video.id.videoId && <VideoCard video={video} width2={width2} />}
+                            {video.id.channelId && <ChannelCard video={video} />}
                         </>
                     )
                 })

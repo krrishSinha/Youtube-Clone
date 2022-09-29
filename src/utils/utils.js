@@ -6,12 +6,6 @@ const categories = [
         name: 'Technical sagar'
     },
     {
-        name: 'sandeep maheshwari'
-    },
-    {
-        name: 'techno gamer'
-    },
-    {
         name: 'Music'
     },
     {

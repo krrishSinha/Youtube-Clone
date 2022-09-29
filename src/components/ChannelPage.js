@@ -21,7 +21,7 @@ const ChannelPage = () => {
 
     fetchData(`search?part=snippet%2Cid&channelId=${id}`)
       .then((data) => setChannelVideos(data.items))
-  }, [])
+  }, [channelVideos])
 
   if (channelVideos == null) return (
     <Box sx={{ height: '100vh', display: 'flex', justifyContent: 'center', alignItems: 'center' }} >

@@ -7,10 +7,10 @@ import { Routes, Route } from 'react-router-dom'
 
 function App() {
   return (
-    <div style={{ backgroundColor: '#000000', color: '#EDEADE', minHeight: '100vh' }} >
+    <div style={{ backgroundColor: '#000000', color: '#EDEADE', minHeight: '100vh', overflowX: 'hidden' }} >
       <Navbar />
       <Routes>
-      <Route path="/" element={ <Feed/> } />
+      <Route path="/" exact element={ <Feed/> } />
       <Route path="/video/:id" exact element={ <VideoPage/> } />
       <Route path="/search/:searchTerm" exact element={ <SearchPage /> } />
       <Route path="/channel/:id" exact element={ <ChannelPage/> } />

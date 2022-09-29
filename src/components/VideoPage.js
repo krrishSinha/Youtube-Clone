@@ -22,7 +22,7 @@ const VideoPage = () => {
     fetchData(`search?relatedToVideoId=${id}&part=id%2Csnippet&type=video`)
       .then((data) => setVideos(data.items))
 
-  }, [])
+  }, [videoDetail])
 
 
   if (videoDetail === null) return (

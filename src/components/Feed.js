@@ -34,16 +34,16 @@ const Feed = () => {
 
   return (
     <Stack gap={1} justifyContent='space-between'  direction={{ sm: 'column', md: 'row' }}>
-      <Box sx={{width: {md: '13%', xs: '100%', borderRight: '1px solid #f2f2f2' }}} >
+      <Box sx={{width: {md: '15%', xs: '100%', borderRight: '1px solid #f2f2f2' }}} >
         <SideBar selectedCategory={selectedCategory} setSelectedCategory={setSelectedCategory}  />
       </Box>
 
       <Box sx={{width: '90%'}}>
-        <Typography variant='h4' px={2} my={2}>
+        <Typography variant='h4' px={4} my={2} sx={{textAlign: {md: 'left', xs: 'center' }}} >
          <span style={{color: 'red'}} > {selectedCategory} </span> Videos
         </Typography>
 
-        <Box px={2} my={1} sx={{ display: 'flex', alignItems: 'center',  flexWrap: 'wrap', gap: '10px', justifyContent: 'start' }} >
+        <Box px={2} my={1} sx={{ display: 'flex', flexWrap: 'wrap', gap: '20px', justifyContent: { md: 'space-evenly', xs: 'center' } }} >
           <Videos videos={videos}/>
         </Box>
       </Box>
